@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SmartBee</string>
+    <string name="app_config">config.sample</string>
+    <string name="local_remote_files">files</string>
+    <string name="app_share">Share via</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="no_network_header">Network connection lost!</string>
+    <string name="no_network_description">When the connection is re-established please try again</string>
+    <string name="change_config_url">Change Config URL</string>
+    <string name="reset_config_url">Reset Config URL</string>
+    <string name="change_config_url_window_title">Change Config URL</string>
+    <string name="change_config_url_window_message">Update the URL for your Host File</string>
+    <string name="cancel">Cancel</string>
+    <string name="load_config">Load Config</string>
+    <string name="loading">Loading</string>
+    <string name="loading_config">Loading Config</string>
+    <string name="settings">Settings</string>
+    <string name="privacy">Privacy</string>
+
+</resources>

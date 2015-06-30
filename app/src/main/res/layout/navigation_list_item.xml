@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:gravity="center_vertical"
+              android:paddingTop="@dimen/navigation_item_padding_top"
+              android:paddingBottom="@dimen/navigation_item_padding_bottom"
+              android:paddingLeft="@dimen/navigation_item_padding_left"
+              android:paddingRight="@dimen/navigation_item_padding_right"
+              tools:context="com.smartbee.wat.Fragment.NavigationDrawerFragment"
+              android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:paddingRight="@dimen/navigation_icon_spacer"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Title"/>
+
+</LinearLayout>
