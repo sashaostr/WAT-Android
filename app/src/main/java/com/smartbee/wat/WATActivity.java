@@ -858,6 +858,15 @@ public class WATActivity extends ActionBarActivity
                             File file = new File(imageStorageDir + File.separator + "IMG_" + String.valueOf(System.currentTimeMillis()) + ".jpg");
                             imageUri = Uri.fromFile(file);
 
+                            //FOR KITKAT - open camera only
+                            if (android.os.Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT || android.os.Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT_WATCH){
+                                mUploadMessage = uploadMsg;
+                                Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+                                getActivity().startActivityForResult(takePictureIntent,  FILECHOOSER_RESULTCODE);
+                                return;
+                            }
+
                             final List<Intent> cameraIntents = new ArrayList<Intent>();
                             final Intent captureIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
                             final PackageManager packageManager = mContext.getPackageManager();
@@ -877,10 +886,10 @@ public class WATActivity extends ActionBarActivity
                             Intent i = new Intent(Intent.ACTION_GET_CONTENT);
                             i.addCategory(Intent.CATEGORY_OPENABLE);
                             i.setType("image/*");
-                            Intent chooserIntent = Intent.createChooser(i,"Image Chooser");
+                            Intent chooserIntent = Intent.createChooser(i, "Image Chooser");
                             chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, cameraIntents.toArray(new Parcelable[]{}));
-//                            PlaceholderFragment.this.startActivityForResult(chooserIntent,  FILECHOOSER_RESULTCODE);
-                            getActivity().startActivityForResult(chooserIntent,  FILECHOOSER_RESULTCODE);
+                            getActivity().startActivityForResult(chooserIntent, FILECHOOSER_RESULTCODE);
+
                         }
 
                         public boolean onShowFileChooser(
